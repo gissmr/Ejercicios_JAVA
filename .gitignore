@@ -1,0 +1,16 @@
+# Compilados de Java
+*.class
+
+# Carpetas de salida
+bin/
+out/
+build/
+target/
+
+# Configuraciones de IDEs
+.vscode/
+.idea/
+*.iml
+*.project
+*.classpath
+*.settings/
