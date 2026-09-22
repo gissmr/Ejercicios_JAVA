@@ -7,6 +7,7 @@ public class ProductoIndustrial {
     private double precioUnitario;
     private int cantidadDisponible;
 
+
     public ProductoIndustrial(String codigo, String nombre, String categoria, double precioUnitario, int cantidadDisponible) {
 
         if (codigo.isEmpty()) {
