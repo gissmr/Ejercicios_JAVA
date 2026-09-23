@@ -58,5 +58,22 @@ public class Main {
                 System.out.println("Stock disminuido exitosamente");
             }
         }
+
+        System.out.println("== CALCULAR VALOR TOTAL DEL INVENTARIO ==");
+        double sumaTotal = 0;
+        for (ProductoIndustrial productoActual : inventario) {
+            sumaTotal = sumaTotal + productoActual.calcularValorInventario();
+        }
+        System.out.println("El valor total de la bodega es: $" + (long) sumaTotal);
+
+
+        System.out.println("== PRODUCTOS CON STOCK INFERIOR AL LÍMITE ==");
+        int limiteAlerta = 100;
+        System.out.println("Límite: " + limiteAlerta);
+        for (ProductoIndustrial productoActual : inventario) {
+            if (productoActual.tieneStockBajo(limiteAlerta)) {
+                productoActual.mostrarInformacion();
+            }
+        }
     }
 }
