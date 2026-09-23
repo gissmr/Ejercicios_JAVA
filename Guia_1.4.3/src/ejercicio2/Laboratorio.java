@@ -20,3 +20,4 @@ public class Laboratorio {
         throw new MuestraNoEncontradaException("Error: No existe muestra con el código " + codigoABuscar);
     }
 }
+
