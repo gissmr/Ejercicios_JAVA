@@ -12,11 +12,44 @@ public class Muestra {
         RECHAZADA
     }
 
+    public String getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(String codigo) {
+        this.codigo = codigo;
+    }
+
+    public String getTipoAnalisis() {
+        return tipoAnalisis;
+    }
+
+    public void setTipoAnalisis(String tipoAnalisis) {
+        this.tipoAnalisis = tipoAnalisis;
+    }
+
+    public String getFechaRecepcion() {
+        return fechaRecepcion;
+    }
+
+    public void setFechaRecepcion(String fechaRecepcion) {
+        this.fechaRecepcion = fechaRecepcion;
+    }
+
+    public EstadoMuestra getEstado() {
+        return estado;
+    }
+
+    public void setEstado(EstadoMuestra estado) {
+        this.estado = estado;
+    }
+
     public Muestra(String codigo, String tipoAnalisis, String fechaRecepcion) {
         this.codigo = codigo;
         this.tipoAnalisis = tipoAnalisis;
         this.fechaRecepcion = fechaRecepcion;
         this.estado = EstadoMuestra.RECIBIDA;
+
 
     }
 }
