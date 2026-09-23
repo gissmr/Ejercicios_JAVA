@@ -1,5 +1,6 @@
 package Ejercicio1;
 
+import javax.swing.plaf.synth.SynthOptionPaneUI;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,6 +23,40 @@ public class Main {
         System.out.println("== LISTA DE PRODUCTOS ==");
         for (ProductoIndustrial productoActual : inventario) {
             productoActual.mostrarInformacion();
+        }
+
+        System.out.println("== BÚSQUEDA DE PRODUCTO POR CÓDIGO ==");
+        for (ProductoIndustrial prodCoincidencia : inventario) {
+            if (prodCoincidencia.coincideConCodigo("G-01")) {
+                System.out.println("Producto encontrado!");
+                prodCoincidencia.mostrarInformacion();
+            }
+        }
+
+        System.out.println("== BÚSQUEDA DE PRODUCTO POR NOMBRE O CATEGORÍA ==");
+        for (ProductoIndustrial prodBuscado : inventario) {
+            if (prodBuscado.coincideConTexto("Tornillos")) {
+                System.out.println("Producto encontrado!");
+                prodBuscado.mostrarInformacion();
+            }
+        }
+
+        System.out.println("== AUMENTAR STOCK DEL PRODUCTO ==");
+        for (ProductoIndustrial stockAumentado : inventario) {
+            if (stockAumentado.coincideConTexto("Ampolleta industrial")) {
+                stockAumentado.aumentarStock(5);
+                stockAumentado.mostrarInformacion();
+                System.out.println("Stock aumentado exitosamente");
+            }
+        }
+
+        System.out.println("== DISMINUIR STOCK DEL PRODUCTO ==");
+        for (ProductoIndustrial menosStock : inventario) {
+            if (menosStock.coincideConTexto("Gas")) {
+                menosStock.disminuirStock(50);
+                menosStock.mostrarInformacion();
+                System.out.println("Stock disminuido exitosamente");
+            }
         }
     }
 }
