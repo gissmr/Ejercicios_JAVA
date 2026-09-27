@@ -1,4 +1,4 @@
-public class Maquina {
+public abstract class Maquina {
 
     protected String codigo;
     protected int horasUso;
@@ -34,8 +34,8 @@ public class Maquina {
 
     public void setHorasUso(int horasUso) {
 
-        if (horasUso < 0 || horasUso > 2000) {
-            throw new IllegalArgumentException("Las horas de uso deben estar entre 0 y 2000");
+        if (horasUso < 0 || horasUso > 20000) {
+            throw new IllegalArgumentException("Las horas de uso deben estar entre 0 y 20000");
         }
         this.horasUso = horasUso;
     }
@@ -59,4 +59,6 @@ public class Maquina {
                 ", horasUso=" + horasUso +
                 '}';
     }
+
+    public abstract double calcularCosto();
 }
