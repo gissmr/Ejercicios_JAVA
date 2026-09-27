@@ -1,4 +1,4 @@
-package Ejercicio1;
+package ejercicio1;
 
 public class ProductoIndustrial {
     private String codigo;
@@ -78,11 +78,12 @@ public class ProductoIndustrial {
         return this.nombre.equalsIgnoreCase(texto) || this.categoria.equalsIgnoreCase(texto);
     }
 
-    public void aumentarStock(int cantidad) {
+    public boolean aumentarStock(int cantidad) {
         if (cantidad <= 0) {
             throw new IllegalArgumentException("El número debe ser positivo y mayor a 0");
         }
         this.cantidadDisponible = this.cantidadDisponible + cantidad;
+        return false;
     }
 
     public boolean disminuirStock(int cantidad) {

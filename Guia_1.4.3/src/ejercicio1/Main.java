@@ -1,6 +1,5 @@
-package Ejercicio1;
+package ejercicio1;
 
-import javax.swing.plaf.synth.SynthOptionPaneUI;
 import java.util.ArrayList;
 import java.util.List;
 
