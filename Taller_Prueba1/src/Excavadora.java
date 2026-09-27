@@ -44,16 +44,22 @@ public class Excavadora extends Maquina implements Certificable {
 
     @Override
     public double calcularCosto() {
-        return 0;
+
+        double costo = 150000;
+        if (!mantencionAlDia) {
+            costo = costo * 1.25;
+        }
+        return costo;
     }
 
     @Override
     public boolean estaCertificada() {
-        return false;
+        return certificacionActiva;
     }
 
     @Override
     public void certificar() {
+        certificacionActiva = true;
 
     }
 }
