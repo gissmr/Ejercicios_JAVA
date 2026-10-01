@@ -59,4 +59,9 @@ public class ClasePersonal extends Clase implements Cancelable {
     public void activarCancelacion() { //Si no la tiene y quiero activar esta cancelación
         cancelacionAtiva = true;       //Trae ese atributo y si está false lo cambia a true.
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + " | Evaluación: " + (this.evaluacionPrevia ? "Si" : "No") + " | Cancelación: " + (this.cancelacionAtiva ? "Si" : "No") + " | Costo: $" + calcularCosto();
+    }
 }

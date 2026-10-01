@@ -28,4 +28,9 @@ public class ClaseSemiPersonal extends Clase {
         }
         return costo;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + " | Participantes: " + this.cantParticipantes + " | Costo: $" + calcularCosto();
+    }
 }

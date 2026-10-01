@@ -16,7 +16,7 @@ public class GestorCentro {
 
     public ArrayList<Clase> metodoBusqueda (String buscado) {
         ArrayList<Clase> coincidencias = new ArrayList<>();
-        System.out.println("== Clases encontradas ==");
+        System.out.println("- Clases encontradas -");
         for (Clase clase : listaClases) {
             if (clase.getNombre().equalsIgnoreCase(buscado)) {
                 coincidencias.add(clase);

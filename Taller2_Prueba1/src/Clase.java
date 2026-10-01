@@ -51,10 +51,8 @@ public abstract class Clase {
 
     @Override
     public String toString() {
-        return "Clase{" +
-                "nombre='" + nombre + '\'' +
-                ", cupoMaximo=" + cupoMaximo +
-                '}';
+        return "Clase:" + nombre + " | Cupo: " + cupoMaximo + " | Duración: " + duracion + " min";
+
     }
 
     public abstract double calcularCosto();
